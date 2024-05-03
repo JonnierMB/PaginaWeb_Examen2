@@ -17,10 +17,12 @@ async function getpokeData(url) {
     console.log(datas);
     const error = document.querySelector(".containerError");
     const container = document.querySelector(".containerInfo");
+    const Evolution = document.querySelector(".containerEvolution");
     switch(datas){
         case undefined: 
             error.style.display = "flex";
             container.style.display = "none";
+            Evolution.style.display = "none";
         break
         default:
             error.style.display = "none";
@@ -81,7 +83,6 @@ async function getpokeData(url) {
 
             //Is Evolutionable?
             let pos = pokemonName.indexOf(pokeName);
-            const Evolution = document.querySelector(".containerEvolution");
             let nextpos = pos + 1;
             if (nextpos < pokemonName.length) {
                 let evolution = pokemonName[nextpos];
