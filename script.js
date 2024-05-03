@@ -67,6 +67,9 @@ async function getpokeData(url) {
 
 
             //put data in html code
+            //pokemon name
+            let name = document.querySelector('.pokemonName');
+            name.innerHTML = pokeName;
             let type = document.querySelector('.pokemonType');
             type.innerHTML = pokeType;
             let imgdata = document.querySelector('.pokemonImg');
